@@ -14,7 +14,15 @@ html {
       font-size: 62.5%;
 }
 
-/* Reusable classes */
+nav .hamberger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+nav .hamberger .bar{
+    font-size: 4rem;
+}
 
 
 
@@ -42,6 +50,8 @@ section.gallery{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 }
 .gallery .product .desc{
     width: 100%;
@@ -67,7 +77,7 @@ section.gallery{
   /* Put transition on original "state" */
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .btn--full:link,
@@ -80,6 +90,8 @@ section.gallery{
 .btn--full:active {
   background-color: #cf711f;
 }
+
+
 
 @media (max-width: 34em) {
     section.gallery{
