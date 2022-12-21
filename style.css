@@ -42,6 +42,11 @@ section.gallery{
     flex-direction: column;
     padding: 1rem;
 }
+.product-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .product img{
     width: 100%;
     height: min(80%- 1.5rem);
