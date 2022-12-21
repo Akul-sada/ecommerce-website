@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+html {  
+      font-size: 62.5%;
+}
+
+section.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    gap: 2rem;
+    /* column-gap: 2rem; */
+}
+.product{
+    max-width: 60rem;
+    box-shadow: rgb(6 24 44 / 40%) 0px 0px 0px 2px, rgb(6 24 44 / 65%) 0px 4px 6px -1px, rgb(255 255 255 / 8%) 0px 1px 0px inset;
+}
+.product img{
+    width: 100%;
+    height: 50%;
+}
+.gallery .product .desc{
+    width: 100%;
+    height: 100%;
+}
