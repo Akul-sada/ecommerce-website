@@ -1,6 +1,8 @@
 :root{
     --color-primary: #e67e22;
     --color-button-hover:#cf711f;
+    --color-background-header:#fdf2e9;
+    --color-white:#fff;
 
 }
 *{
@@ -19,15 +21,33 @@ html {
       font-size: 62.5%;
       overflow-x: hidden;
 }
-
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
 
 /* Section Gallery */
-section.gallery{
+section{
+  padding: 3.2rem 0 4.8rem 0;
+}
+.heading-catagory{
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5rem;
+  color: #888;
+}
+
+div.gallery{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 2rem;
     gap: 2rem;
-    margin-top: 9.6rem;
+    margin-top: 2.4rem;
 }
 .product{
     max-width: 60rem;
@@ -51,9 +71,7 @@ section.gallery{
 .gallery .product .product-description{
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-    
+    justify-content: center;   
 }
 .gallery .product .desc{
     width: 100%;
@@ -85,7 +103,7 @@ section.gallery{
 .btn--full:link,
 .btn--full:visited {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 .btn--full:hover,
@@ -102,7 +120,7 @@ section.gallery{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fdf2e9;
+    background-color: var(--color-background-header);
   
     /* Because we want header to be sticky later */
     height: 9.6rem;
@@ -137,20 +155,20 @@ section.gallery{
   
   .main-nav-link:hover,
   .main-nav-link:active {
-    color: #cf711f;
+    color: var(--color-button-hover);
   }
   
   .main-nav-link.nav-cta:link,
   .main-nav-link.nav-cta:visited {
     padding: 1.2rem 2.4rem;
     border-radius: 9px;
-    color: #fff;
-    background-color: #e67e22;
+    color: var(--color-white);
+    background-color: var(--color-primary);
   }
   
   .main-nav-link.nav-cta:hover,
   .main-nav-link.nav-cta:active {
-    background-color: #cf711f;
+    background-color: var(--color-button-hover);
   }
   
   /* MOBILE */
@@ -186,16 +204,88 @@ section.gallery{
     box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   }
   
-  .sticky .section-hero {
-    margin-top: 9.6rem;
-  }
+ 
 
 /*  */
-@media (max-width:34em){
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
 
 }
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
 @media (max-width: 34em) {
-    section.gallery{
+  
+    div.gallery{
         grid-template-columns: repeat(2, 1fr);
     }
     html {
@@ -262,4 +352,8 @@ section.gallery{
   .main-nav-link:visited {
     font-size: 3rem;
   }
+  /* Section */
+  section {
+    padding: 9.2rem 0 1.2rem 0;
+}
   }
