@@ -9,15 +9,43 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/2c81460ad8.js" crossorigin="anonymous"></script>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule=""
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+  ></script>
+
+    <script src="script.js" defer></script>
     <title>E commerce Wibsite</title>
   </head>
   <body>
-    <nav>
-      <div class="hamberger">
-        <i class="fa fa-bars bar" aria-hidden="true"></i>
-    </div>
-    </nav>
+    <header class="header nav-open">
+      <a href="#">
+        <img class="logo" alt="logo" src="img1.jpg"/>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#how">Home</a></li>
+          <li><a class="main-nav-link" href="#meals">Bedroom & Mattresses</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Dining</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Storage</a></li>
+          <li><a class="main-nav-link" href="#pricing">Study</a></li>
+          <li><a class="main-nav-link" href="#pricing">Lighting & Decor</a></li>
+          <!-- <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li> -->
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
     <section class="gallery">
         <!-- https://wa.me/9929982119?text=Mujhe%20ye%20bohot%20pasand%20aya%20hai -->
       <div class="product">
