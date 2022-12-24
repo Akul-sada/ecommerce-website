@@ -80,6 +80,7 @@ div.gallery{
 }
 .price{
   font-size: 3rem;
+  display: block;
 }
 .actual-price{
   font-size: 3rem;
