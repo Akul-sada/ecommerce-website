@@ -73,8 +73,16 @@ div.gallery{
     justify-content: center;
     flex-direction: column;
 }
+.pricing{
+  display: flex;
+  
+}
 .price{
   font-size: 3rem;
+}
+.actual-price{
+  font-size: 3rem;
+  text-decoration: line-through;
 }
 
 /* Button */
